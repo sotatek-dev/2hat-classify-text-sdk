@@ -1,6 +1,6 @@
 /**
  * Classify text into risk scores
- * Will take text and classify it via risk  
+ * Will take text and classify it via risk
  *
  * OpenAPI spec version: 2.0.1
  * Contact: support@twohat.com
@@ -9,12 +9,12 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { HttpsapiSwaggerhubComapistwohatrules202componentsschemasRule } from './httpsapiSwaggerhubComapistwohatrules202componentsschemasRule';
+import { Rule } from './rule';
 
 /**
  * The system breaks each word into it's own slot (note that some words are broken up and made into two slots like heythere can become hey and there)
  */
-export interface Slots { 
+export interface Slots {
     /**
      * This is the original text before we normalized it or fixed any spelling.  So \"PASS\" instead of \"pass\"
      */
@@ -28,9 +28,9 @@ export interface Slots {
      */
     solution?: string;
     /**
-     * These are all the rules considered for this slot   The system considers many rules when it tries to find out what this word is in context.  A token is a rule that it considered.  Longer tokens by word count beat smaller tokens so \"made out\" is less important than \"made out of\".  Likewise when tokens are tied the tie is broken by the higher risk item.  Some expections apply when there are too many steps to fix the spelling or words are blacklisted etc. 
+     * These are all the rules considered for this slot   The system considers many rules when it tries to find out what this word is in context.  A token is a rule that it considered.  Longer tokens by word count beat smaller tokens so \"made out\" is less important than \"made out of\".  Likewise when tokens are tied the tie is broken by the higher risk item.  Some expections apply when there are too many steps to fix the spelling or words are blacklisted etc.
      */
-    tokens?: Array<HttpsapiSwaggerhubComapistwohatrules202componentsschemasRule>;
+    tokens?: Array<Rule>;
     /**
      * This is the start position with an offset of 0 for the original phrase. The end position is startPos + len(original). Negative numbers mean they are part of the \"pre\" or the sentence before brought back into context.
      */

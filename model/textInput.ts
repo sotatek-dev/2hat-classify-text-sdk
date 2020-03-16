@@ -1,6 +1,6 @@
 /**
  * Classify text into risk scores
- * Will take text and classify it via risk  
+ * Will take text and classify it via risk
  *
  * OpenAPI spec version: 2.0.1
  * Contact: support@twohat.com
@@ -10,26 +10,26 @@
  * Do not edit the class manually.
  */
 import { ConfigTextClassifier } from './configTextClassifier';
-import { HttpsapiSwaggerhubComapistwohatrules202componentsschemasRule } from './httpsapiSwaggerhubComapistwohatrules202componentsschemasRule';
-import { HttpsapiSwaggerhubComapistwohatshared200componentsschemasClientId } from './httpsapiSwaggerhubComapistwohatshared200componentsschemasClientId';
-import { HttpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode } from './httpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode';
+import { Rule } from './rule';
+import { ClientId } from './clientId';
+import { LanguageCode } from './languageCode';
 import { PreField } from './preField';
 import { TextField } from './textField';
 
-export interface TextInput { 
-    clientId: HttpsapiSwaggerhubComapistwohatshared200componentsschemasClientId;
+export interface TextInput {
+    clientId: ClientId;
     /**
      * What kind of UGC are you classifiying
      */
     contentType?: TextInput.ContentTypeEnum;
-    language: HttpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode;
+    language: LanguageCode;
     text: TextField;
     pre?: PreField;
     config?: ConfigTextClassifier;
     /**
      * Pass in potential rules so you can test the impact to the system
      */
-    testRules?: Array<HttpsapiSwaggerhubComapistwohatrules202componentsschemasRule>;
+    testRules?: Array<Rule>;
 }
 export namespace TextInput {
     export type ContentTypeEnum = 'SHORT_TEXT' | 'LONG_TEXT' | 'USERNAME';

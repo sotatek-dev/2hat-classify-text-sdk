@@ -1,6 +1,6 @@
 /**
  * Classify text into risk scores
- * Will take text and classify it via risk  
+ * Will take text and classify it via risk
  *
  * OpenAPI spec version: 2.0.1
  * Contact: support@twohat.com
@@ -9,13 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { HttpsapiSwaggerhubComapistwohatshared200componentsschemasTopics } from './httpsapiSwaggerhubComapistwohatshared200componentsschemasTopics';
+import { Topics } from './topics';
 import { RedactedTextField } from './redactedTextField';
 
 /**
  * Which parts of the text failed the filter.
  */
-export interface FailingFragment { 
+export interface FailingFragment {
     /**
      * the text that failed
      */
@@ -25,7 +25,7 @@ export interface FailingFragment {
      */
     normalized?: string;
     redactedText?: RedactedTextField;
-    topics?: HttpsapiSwaggerhubComapistwohatshared200componentsschemasTopics;
+    topics?: Topics;
     /**
      * The number of characters in the original text that this appears with an offset of 0
      */

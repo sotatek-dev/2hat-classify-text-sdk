@@ -1,6 +1,6 @@
 /**
  * Classify text into risk scores
- * Will take text and classify it via risk  
+ * Will take text and classify it via risk
  *
  * OpenAPI spec version: 2.0.1
  * Contact: support@twohat.com
@@ -10,15 +10,15 @@
  * Do not edit the class manually.
  */
 import { FailingFragment } from './failingFragment';
-import { HttpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode } from './httpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode';
-import { HttpsapiSwaggerhubComapistwohatshared200componentsschemasTopics } from './httpsapiSwaggerhubComapistwohatshared200componentsschemasTopics';
+import { LanguageCode } from './languageCode';
+import { Topics } from './topics';
 import { ModelObject } from './modelObject';
 import { PreField } from './preField';
 import { RedactedTextField } from './redactedTextField';
 import { Slots } from './slots';
 import { TextField } from './textField';
 
-export interface TextClassifiedOutput { 
+export interface TextClassifiedOutput {
     /**
      * If extended=true in the request it will output the longer details of all things it considered.  This is quite a bit more costly in latency and CPU to run so we advise to only call it when needed.  As such it will be billed as 2 requests instead of one.
      */
@@ -27,7 +27,7 @@ export interface TextClassifiedOutput {
      * Which parts of the text failed the filter.
      */
     failingFragments?: Array<FailingFragment>;
-    language?: HttpsapiSwaggerhubComapistwohatshared200componentsschemasLanguageCode;
+    language?: LanguageCode;
     pre?: PreField;
     /**
      * FUTURE | Occasionally we may run AI on certain users to check for things like grooming, suidice, sextortion and other conversation items.  This will have any predictions that have been so far.
@@ -47,5 +47,5 @@ export interface TextClassifiedOutput {
      */
     simplified?: string;
     text?: TextField;
-    topics?: HttpsapiSwaggerhubComapistwohatshared200componentsschemasTopics;
+    topics?: Topics;
 }

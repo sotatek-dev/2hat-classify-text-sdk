@@ -13,6 +13,7 @@ export * from './textField';
 export * from './textInput';
 export * from './clientId';
 export * from './flag';
+export * from './flags';
 export * from './languageCode';
 export * from './prediction';
 export * from './rule';

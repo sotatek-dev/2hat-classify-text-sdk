@@ -1,8 +1,8 @@
 {
   "name": "2hat-classify-text-sdk",
   "version": "1.0.0",
-  "description": "Since the SDK exported from https://app.swaggerhub.com/apis/twohat/classifyText/2.0.1#/default/classifyText could not parse external schemas, we need to manually export the missinig schemas from these docs:",
-  "main": "index.ts",
+  "description": "Client SDK for https://app.swaggerhub.com/apis/twohat/classifyText/2.0.1#/default/classifyText",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,23 @@
     "type": "git",
     "url": "git+https://github.com/sotatek-dev/2hat-classify-text-sdk.git"
   },
-  "author": "",
+  "author": "Sota Tek",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sotatek-dev/2hat-classify-text-sdk/issues"
   },
-  "homepage": "https://github.com/sotatek-dev/2hat-classify-text-sdk#readme"
+  "homepage": "https://github.com/sotatek-dev/2hat-classify-text-sdk#readme",
+  "devDependencies": {
+    "@angular/common": "^9.0.6",
+    "@angular/core": "^9.0.6",
+    "@types/node": "^13.9.1",
+    "rxjs": "^6.5.4",
+    "typescript": "3.8.3"
+  },
+  "peerDependencies": {
+    "@angular/common": "*",
+    "@angular/core": "*",
+    "@types/node": "*",
+    "rxjs": "*"
+  }
 }

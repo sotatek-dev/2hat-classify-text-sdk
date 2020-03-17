@@ -1,0 +1,19 @@
+{
+  "name": "2hat-classify-text-sdk",
+  "version": "1.0.0",
+  "description": "Since the SDK exported from https://app.swaggerhub.com/apis/twohat/classifyText/2.0.1#/default/classifyText could not parse external schemas, we need to manually export the missinig schemas from these docs:",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sotatek-dev/2hat-classify-text-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sotatek-dev/2hat-classify-text-sdk/issues"
+  },
+  "homepage": "https://github.com/sotatek-dev/2hat-classify-text-sdk#readme"
+}
